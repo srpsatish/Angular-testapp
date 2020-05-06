@@ -1,0 +1,14 @@
+<div>
+  <!-- reactive forms -->
+  <form [formGroup]="formdata" (ngSubmit)="onClickSubmit2(formdata.value)">
+    <input type="text" name="name" formControlName="name" placeholder="Apna Name Bata"><br>
+    <input type="text" name="type" formControlName="type" placeholder="Apna Aukat Bata"><br>
+    <input type="email" name="text" formControlName="email" placeholder="Apna Email Bata"><br>
+    <input type="submit" [disabled]="!formdata.valid" value="Submit">
+  </form>
+</div>
+<p>Name is {{name}}</p>
+<p>Type is {{type}}</p>
+<p>Email is {{email}}</p>
+<p>Today Date is {{todayDate|date:'longDate'}}</p>
+
